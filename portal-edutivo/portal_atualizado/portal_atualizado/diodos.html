@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diodos e Retificação | Portal Educativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <a href="index.html" class="logo">Portal Educativo</a>
+
+        <nav class="navegacao">
+            <a href="index.html">Início</a>
+            <a href="#funcionamento">Funcionamento</a>
+            <a href="#tipos">Tipos de diodos</a>
+            <a href="#retificacao">Retificação</a>
+        </nav>
+
+        <form action="diodos.html" method="get">
+            <input type="search" name="q" placeholder="Pesquisar conteúdo" aria-label="Pesquisar conteúdo">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <div class="layout">
+        <aside class="menu">
+            <h2>Menu</h2>
+            <a href="index.html">Página inicial</a>
+            <a href="#conceito">O que é um diodo?</a>
+            <a href="#funcionamento">Funcionamento</a>
+            <a href="#tipos">Tipos de diodos</a>
+            <a href="#retificacao">Retificação</a>
+            <a href="#aplicacoes">Aplicações</a>
+            <a href="#curiosidade">Curiosidade</a>
+            <a href="#referencias">Referências</a>
+        </aside>
+
+        <main class="conteudo">
+            <section class="destaque">
+                <h1>Diodos e Retificação</h1>
+                <p>Os diodos são componentes importantes na eletrônica. Eles ajudam a controlar o sentido da corrente elétrica e são usados em fontes de alimentação, iluminação e circuitos de proteção.</p>
+                <img src="assets/images/tipos-de-diodos.png" alt="Vários tipos de diodos eletrônicos" style="max-width: 100%; height: auto;">
+                <p><small>Imagem retirada do documento de referência do projeto.</small></p>
+            </section>
+
+            <section id="conceito" class="secao">
+                <h2>1. O que é um diodo?</h2>
+                <p>O diodo é um componente eletrônico feito de materiais semicondutores. Sua principal característica é permitir que a corrente elétrica passe com mais facilidade em um sentido do que no sentido contrário.</p>
+                <p>Por causa disso, ele pode ser usado para direcionar a corrente e ajudar a proteger outros componentes de um circuito.</p>
+                <img src="assets/images/diodo.png" alt="Diodo eletrônico" style="max-width: 100%; height: auto;">
+                <p><small>Imagem retirada do documento de referência do projeto.</small></p>
+            </section>
+
+            <section id="funcionamento" class="secao">
+                <h2>2. Como funciona?</h2>
+                <p>O diodo possui dois terminais: ânodo e cátodo. Quando está ligado no sentido correto, chamado de <strong>polarização direta</strong>, ele permite a passagem de corrente. Quando a ligação é invertida, chamada de <strong>polarização inversa</strong>, ele normalmente bloqueia a corrente.</p>
+                <p>Isso não significa que qualquer diodo suporte qualquer tensão. Se os limites do componente forem ultrapassados, ele pode ser danificado.</p>
+            </section>
+
+            <section id="tipos" class="secao">
+                <h2>3. Principais tipos de diodos</h2>
+
+                <article class="cartao">
+                    <h3>Diodo retificador</h3>
+                    <p>É usado principalmente em fontes de alimentação. Ele permite aproveitar a corrente em um sentido e ajuda a converter corrente alternada em corrente contínua pulsante.</p>
+                </article>
+
+                <article class="cartao">
+                    <h3>LED (diodo emissor de luz)</h3>
+                    <img src="assets/images/led.png" alt="Diodo emissor de luz (LED)" style="max-width: 100%; height: auto;">
+                    <p>O LED emite luz quando a corrente passa por ele no sentido adequado. Está presente em lâmpadas, telas, indicadores e muitos aparelhos eletrônicos.</p>
+                </article>
+
+                <article class="cartao">
+                    <h3>Diodo Zener</h3>
+                    <img src="assets/images/zener.png" alt="Diodo Zener" style="max-width: 100%; height: auto;">
+                    <p>O Zener pode trabalhar em uma região específica de polarização inversa para ajudar a limitar ou estabilizar a tensão em determinados circuitos.</p>
+                </article>
+
+                <article class="cartao">
+                    <h3>Fotodiodo</h3>
+                    <p>O fotodiodo responde à luz e transforma essa informação em um sinal elétrico. É utilizado em sensores e em sistemas que recebem sinais luminosos.</p>
+                </article>
+
+                <article class="cartao">
+                    <h3>Diodo Schottky</h3>
+                    <img src="assets/images/schottky.png" alt="Diodo Schottky" style="max-width: 100%; height: auto;">
+                    <p>Esse tipo de diodo costuma ter uma queda de tensão direta menor e pode trabalhar com comutação rápida, sendo útil em alguns circuitos eletrônicos.</p>
+                </article>
+                <p><small>As fotos dos componentes foram retiradas do documento de referência do projeto.</small></p>
+            </section>
+
+            <section id="retificacao" class="secao">
+                <h2>4. O que é retificação?</h2>
+                <p>A retificação é o processo de converter corrente alternada (CA), que muda de sentido, em corrente contínua pulsante. Para isso, são usados diodos em circuitos chamados retificadores.</p>
+
+                <h3>Retificação de meia onda</h3>
+                <p>Usa um diodo para deixar passar um dos semiciclos da corrente alternada e bloquear o outro. É um circuito simples, mas aproveita apenas parte da onda.</p>
+
+                <h3>Retificação de onda completa</h3>
+                <p>Aproveita os dois semiciclos da corrente alternada. Uma maneira comum é usar quatro diodos ligados em uma ponte retificadora.</p>
+
+                <h3>Filtragem da tensão</h3>
+                <p>Depois da retificação, a tensão ainda pode variar. Um capacitor de filtragem ajuda a reduzir essas variações, e outros componentes podem ser usados para regular a tensão de saída.</p>
+            </section>
+
+            <section id="aplicacoes" class="secao">
+                <h2>5. Onde os diodos são utilizados?</h2>
+                <p>Os diodos fazem parte de muitos aparelhos do dia a dia. Alguns exemplos são:</p>
+                <ul>
+                    <li>Fontes de alimentação e carregadores;</li>
+                    <li>Lâmpadas e telas com LED;</li>
+                    <li>Circuitos de proteção contra ligação invertida;</li>
+                    <li>Sensores de luz e sistemas ópticos;</li>
+                    <li>Painéis solares e outros equipamentos eletrônicos.</li>
+                </ul>
+            </section>
+
+            <section id="curiosidade" class="secao">
+                <h2>6. Curiosidade: o rádio de galena</h2>
+                <p>No início do século XX, alguns rádios usavam um cristal de galena e um fio metálico fino para detectar sinais de rádio. Esse sistema funcionava sem pilhas ou tomada, aproveitando as propriedades do material para separar o sinal recebido.</p>
+            </section>
+
+            <section id="referencias" class="secao">
+                <h2>7. Referências</h2>
+                <p>Material de referência do projeto: <em>Diodos e retificação</em>.</p>
+                <ul>
+                    <li><a href="https://www.pearson.com/br/" target="_blank" rel="noopener noreferrer">Pearson Brasil</a></li>
+                    <li><a href="https://www.grupogen.com.br/" target="_blank" rel="noopener noreferrer">Grupo GEN</a></li>
+                    <li><a href="https://minhabiblioteca.com.br/" target="_blank" rel="noopener noreferrer">Minha Biblioteca</a></li>
+                    <li><a href="https://scholar.google.com.br/" target="_blank" rel="noopener noreferrer">Google Acadêmico</a></li>
+                </ul>
+                <p>O grupo deve incluir os livros ou artigos que realmente consultou no trabalho.</p>
+            </section>
+
+            <a class="botao" href="index.html">Voltar à página inicial</a>
+        </main>
+    </div>
+
+    <footer class="rodape">
+        <p>Portal Educativo — Projeto escolar de Eletroeletrônica.</p>
+        <p>Conteúdo: Diodos e Retificação.</p>
+        <a href="index.html">Início</a>
+    </footer>
+
+</body>
+</html>

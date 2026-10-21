@@ -1,0 +1,542 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    color: #263449;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.faixa {
+    min-height: 65px;
+    padding: 14px 6%;
+    background: #c92332;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faixa strong {
+    font-size: 23px;
+}
+
+.faixa span {
+    font-size: 14px;
+}
+
+nav {
+    background: white;
+    padding: 13px 6%;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e0e5ec;
+}
+
+nav a {
+    color: #253c5b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+a:hover {
+    color: #c92332;
+}
+
+.pagina {
+    width: min(1000px, 94%);
+    margin: 30px auto;
+    padding: 32px;
+    background: white;
+    border: 1px solid #e3e8ef;
+    border-radius: 5px;
+    box-shadow: 0 3px 12px #172b4510;
+}
+
+.introducao {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e1e7ef;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #fff0d5;
+    color: #a35b00;
+    padding: 3px 11px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+h1 {
+    color: #172b45;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+h2 {
+    color: #2864db;
+    font-size: 23px;
+    border-bottom: 1px solid #dce4ef;
+    padding-bottom: 7px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #203754;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-top: 8px;
+}
+
+.secao {
+    padding-top: 28px;
+    margin-top: 5px;
+    scroll-margin-top: 20px;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.cartao {
+    padding: 20px;
+    border: 1px solid #e0e6ee;
+    border-radius: 5px;
+    background: #fff;
+    margin: 16px 0;
+}
+
+.cartao p {
+    margin-bottom: 0;
+}
+
+.nota {
+    background: #f0f4f9;
+    border-left: 4px solid #2864db;
+    padding: 14px 17px;
+    margin-top: 20px;
+}
+
+.ilustracao {
+    margin: 24px 0;
+    padding: 25px;
+    text-align: center;
+    background: #f7f9fc;
+    border: 1px solid #e0e6ee;
+}
+
+.diodo-fisico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.diodo-fisico span {
+    width: 25%;
+    height: 4px;
+    background: #a9b4c1;
+}
+
+.corpo-diodo {
+    width: 90px;
+    height: 42px;
+    background: linear-gradient(90deg, #222, #555, #222);
+    border-right: 9px solid #bfc6cf;
+    border-radius: 5px;
+}
+
+.circuito {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: #f5f8fc;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+.polo {
+    color: #c92332;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.simbolo-diodo {
+    color: #173d70;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.lampada {
+    color: #8491a3;
+    font-size: 35px;
+}
+
+.lampada.ligada {
+    color: #e8a900;
+    text-shadow: 0 0 12px #ffe28a;
+}
+
+.lista-tipos {
+    display: grid;
+    gap: 12px;
+}
+
+.tipo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px;
+    border: 1px solid #e2e7ee;
+    border-radius: 5px;
+}
+
+.tipo h3 {
+    margin: 0;
+}
+
+.tipo p {
+    margin-bottom: 0;
+}
+
+.icone {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #e8efff;
+    color: #245ac0;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.icone.led {
+    color: #b87b00;
+    background: #fff4d2;
+}
+
+.icone.zener {
+    color: #c92332;
+    background: #ffeaed;
+}
+
+.icone.foto {
+    color: #6b4db6;
+    background: #f0eaff;
+}
+
+.icone.schottky {
+    color: #16764a;
+    background: #e4f7ed;
+}
+
+.ondas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.ondas > div {
+    min-width: 0;
+}
+
+.ondas span {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #4d5d72;
+}
+
+.ondas svg {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    background: #f8fafc;
+    border: 1px solid #e4e9f0;
+}
+
+.eixo {
+    stroke: #8794a5;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.onda-azul {
+    stroke: #2878d0;
+    stroke-width: 3;
+    fill: none;
+}
+
+.onda-vermelha {
+    stroke: #d52e3d;
+    stroke-width: 3;
+    fill: none;
+}
+
+.desenho {
+    font-size: 35px;
+    color: #2864db;
+}
+
+.desenho.amarelo {
+    color: #e4a900;
+}
+
+.desenho.verde {
+    color: #16865a;
+}
+
+.referencias {
+    padding-left: 22px;
+}
+
+.referencias li {
+    margin: 10px 0;
+}
+
+a {
+    color: #245ac0;
+}
+
+.rodape {
+    background: #172b45;
+    color: white;
+    padding: 28px 6%;
+    text-align: center;
+}
+
+.rodape a {
+    color: white;
+}
+
+.formulario-pesquisa {
+    display: flex;
+    gap: 8px;
+    padding: 10px 6%;
+    background: white;
+}
+
+.formulario-pesquisa input {
+    width: 100%;
+    max-width: 260px;
+    padding: 9px;
+    border: 1px solid #d5dce6;
+    border-radius: 4px;
+}
+
+.formulario-pesquisa button {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #c92332;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario-pesquisa button:hover {
+    background: #991b28;
+}
+
+.busca-destaque {
+    padding: 0 2px;
+    border-radius: 3px;
+    background: #ffe16a;
+    color: #172b45;
+}
+
+nav a.selecionado {
+    color: #c92332;
+    border-bottom: 2px solid #c92332;
+}
+
+.botao-topo {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #c92332;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.botao-topo.visivel {
+    display: block;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+    background: white;
+    border-bottom: 1px solid #e0e5ec;
+}
+
+.topo .logo {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 6%;
+    background: #c92332;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-texto {
+    display: grid;
+    line-height: 1.2;
+}
+
+.logo-texto strong {
+    font-size: 23px;
+    letter-spacing: 0.2px;
+}
+
+.logo-texto strong span {
+    font-weight: 700;
+}
+
+.logo-texto small {
+    margin-top: 4px;
+    color: #ffe5e7;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.topo .navegacao {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding: 0 0 0 6%;
+    border: 0;
+}
+
+.topo .navegacao a {
+    padding: 4px 0;
+}
+
+.topo form {
+    display: flex;
+    gap: 8px;
+    padding: 0 6% 0 0;
+}
+
+.topo form input {
+    width: 210px;
+    min-width: 0;
+    padding: 9px 11px;
+    border: 1px solid #d5dce6;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.topo form button {
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 4px;
+    background: #c92332;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.topo form button:hover {
+    background: #991b28;
+}
+
+@media (max-width: 650px) {
+    .pagina {
+        padding: 20px 16px;
+        margin: 15px auto;
+    }
+
+    .faixa {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav {
+        gap: 12px 18px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .duas-colunas,
+    .ondas {
+        grid-template-columns: 1fr;
+    }
+
+    .tipo {
+        align-items: flex-start;
+    }
+
+    .formulario-pesquisa {
+        padding: 12px 5%;
+    }
+
+    .formulario-pesquisa input {
+        min-width: 0;
+    }
+
+    .topo {
+        gap: 12px;
+    }
+
+    .topo .navegacao {
+        flex-basis: 100%;
+        padding: 0 5%;
+    }
+
+    .topo form {
+        width: 100%;
+        padding: 0 5% 12px;
+    }
+
+    .topo form input {
+        flex: 1;
+        width: auto;
+    }
+}
