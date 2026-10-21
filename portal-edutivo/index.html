@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diodos e Retificação | Portal Educativo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <a href="index.html" class="logo">
+            <span class="logo-texto">
+                <strong>Portal <span>Educativo</span></strong>
+            </span>
+        </a>
+
+        <nav class="navegacao">
+            <a href="index.html">Início</a>
+            <a href="#conceito">O que é um diodo?</a>
+            <a href="#funcionamento">Funcionamento</a>
+            <a href="#tipos">Tipos de diodos</a>
+            <a href="#retificacao">Retificação</a>
+        </nav>
+    </header>
+
+    <div class="layout">
+
+        <!-- MENU DE ASSUNTOS DO PROFESSOR -->
+        <aside class="menu">
+            <h2>Menu de Assuntos</h2>
+
+            <h3>1. Componentes Passivos Básicos</h3>
+            <a href="assuntos/resistores.html">1.1 Resistores e Lei de Ohm</a>
+            <a href="assuntos/capacitores.html">1.2 Capacitores e Armazenamento de Energia</a>
+            <a href="assuntos/indutores.html">1.3 Indutores e Eletromagnetismo</a>
+            <a href="assuntos/associacao.html">1.4 Associação de Componentes</a>
+
+            <h3>2. Semicondutores e Componentes Ativos</h3>
+            <a href="diodos.html">2.1 Diodos e Retificação</a>
+            <a href="assuntos/transistores.html">2.2 Transistores Bipolares de Junção (TBJ)</a>
+            <a href="assuntos/mosfets.html">2.3 MOSFETs</a>
+            <a href="assuntos/circuitos-integrados.html">2.4 Circuitos Integrados</a>
+
+            <h3>3. Grandezas, Sinais e Circuitos Elétricos</h3>
+            <a href="assuntos/ca-cc.html">3.1 Corrente CC vs CA</a>
+            <a href="assuntos/kirchhoff.html">3.2 Leis de Kirchhoff</a>
+            <a href="assuntos/potencia.html">3.3 Potência Elétrica e Efeito Joule</a>
+            <a href="assuntos/frequencia.html">3.4 Frequência e Sinais Elétricos</a>
+
+            <h3>4. Aplicações Práticas</h3>
+            <a href="assuntos/filtros.html">4.1 Filtros Passivos (RC e RL)</a>
+            <a href="assuntos/divisores.html">4.2 Divisores de Tensão e Corrente</a>
+            <a href="assuntos/fontes.html">4.3 Fontes de Alimentação Lineares</a>
+            <a href="assuntos/temporizacao.html">4.4 Circuitos de Temporização (RC)</a>
+
+            <h3>5. Proteção, Medição e Materiais</h3>
+            <a href="assuntos/protecao.html">5.1 Dispositivos de Proteção</a>
+            <a href="assuntos/materiais.html">5.2 Materiais Condutores, Isolantes e Semicondutores</a>
+            <a href="assuntos/multimetro.html">5.3 Uso do Multímetro no Diagnóstico</a>
+            <a href="assuntos/reles.html">5.4 Relés e Chaves Eletromecânicas</a>
+
+            <hr>
+
+            <h3>Nesta página</h3>
+            <a href="#conceito">O que é um diodo?</a>
+            <a href="#funcionamento">Como funciona</a>
+            <a href="#tipos">Tipos de diodos</a>
+            <a href="#exemplo">Exemplo prático</a>
+            <a href="#retificacao">Retificação</a>
+            <a href="#aplicacoes">Aplicações</a>
+            <a href="#curiosidade">Curiosidade</a>
+            <a href="#resumo">Resumo para o caderno</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#referencias">Referências</a>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo">
+
+            <!-- APRESENTAÇÃO -->
+            <section class="destaque">
+                <h1>Diodos e Retificação</h1>
+
+                <p>
+                    Os diodos são componentes fundamentais da eletrônica moderna.
+                    Sua principal função é controlar o sentido da corrente elétrica.
+                    Eles são utilizados em fontes de alimentação, carregadores,
+                    sistemas de iluminação, sensores e diversos aparelhos eletrônicos.
+                </p>
+
+                <figure>
+                    <img
+                        src="assets/images/tipos-de-diodos.png"
+                        alt="Imagem com diferentes tipos de diodos eletrônicos"
+                        style="max-width: 100%; height: auto;"
+                    >
+                    <figcaption>
+                        Diferentes tipos de diodos utilizados em circuitos eletrônicos.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Neste conteúdo, você vai conhecer o funcionamento dos diodos,
+                    suas classificações e sua importância na conversão de corrente
+                    alternada em corrente contínua.
+                </p>
+            </section>
+
+            <!-- INTRODUÇÃO -->
+            <section id="conceito" class="secao">
+                <h2>1. O que é um diodo?</h2>
+
+                <p>
+                    O diodo é um componente eletrônico semicondutor que permite
+                    a passagem da corrente elétrica com mais facilidade em um
+                    sentido do que no sentido contrário. Ele pode ser comparado
+                    a uma válvula que controla a direção do fluxo elétrico.
+                </p>
+
+                <p>
+                    Em um diodo semicondutor comum, a estrutura é formada por
+                    regiões de materiais do tipo P e do tipo N. A união dessas
+                    regiões forma uma junção que determina o comportamento
+                    elétrico do componente.
+                </p>
+
+                <p>
+                    O diodo possui dois terminais: o <strong>ânodo</strong> e o
+                    <strong>cátodo</strong>. Em muitos modelos, uma faixa no corpo
+                    do componente identifica o lado do cátodo.
+                </p>
+
+                <figure>
+                    <img
+                        src="assets/images/diodo.png"
+                        alt="Fotografia de um diodo semicondutor"
+                        style="max-width: 100%; height: auto;"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Exemplo de diodo semicondutor.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Os diodos são importantes porque ajudam a controlar correntes,
+                    proteger circuitos, produzir luz e converter sinais elétricos.
+                </p>
+            </section>
+
+            <!-- FUNCIONAMENTO -->
+            <section id="funcionamento" class="secao">
+                <h2>2. Como funciona um diodo?</h2>
+
+                <p>
+                    O funcionamento de um diodo depende da tensão aplicada
+                    entre seus terminais. As duas condições principais são
+                    a polarização direta e a polarização inversa.
+                </p>
+
+                <article class="cartao">
+                    <h3>2.1 Polarização direta</h3>
+
+                    <p>
+                        A polarização direta acontece quando o ânodo é ligado
+                        ao polo positivo da fonte e o cátodo ao polo negativo.
+                        Quando a tensão é suficiente, o diodo conduz corrente.
+                    </p>
+
+                    <p>
+                        Em muitos diodos de silício, a queda de tensão direta
+                        costuma ficar próxima de 0,7 V, dependendo da corrente,
+                        da temperatura e do modelo utilizado.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>2.2 Polarização inversa</h3>
+
+                    <p>
+                        A polarização inversa ocorre quando o ânodo é ligado
+                        ao polo negativo e o cátodo ao polo positivo da fonte.
+                        Nessa condição, o diodo normalmente bloqueia a corrente,
+                        permitindo apenas uma pequena corrente de fuga.
+                    </p>
+
+                    <p>
+                        Se a tensão inversa ultrapassar o limite do componente,
+                        ele poderá ser danificado. Alguns modelos, como o Zener,
+                        são projetados para funcionar em uma região específica
+                        de ruptura, respeitando seus limites elétricos.
+                    </p>
+                </article>
+
+                <h3>Por que isso é importante?</h3>
+
+                <p>
+                    Essa propriedade permite que o diodo direcione a corrente
+                    em um circuito. É justamente esse comportamento que torna
+                    possível utilizar diodos na retificação de sinais alternados.
+                </p>
+            </section>
+
+            <!-- TIPOS DE DIODOS -->
+            <section id="tipos" class="secao">
+                <h2>3. Principais tipos de diodos</h2>
+
+                <p>
+                    Existem diversos tipos de diodos. Cada um possui características
+                    próprias e é escolhido de acordo com a função que deverá realizar.
+                </p>
+
+                <article class="cartao">
+                    <h3>3.1 Diodo retificador</h3>
+
+                    <p>
+                        É utilizado principalmente para converter corrente
+                        alternada em corrente contínua pulsante. Aparece em
+                        fontes de alimentação, carregadores e equipamentos eletrônicos.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>3.2 LED — Diodo Emissor de Luz</h3>
+
+                    <figure>
+                        <img
+                            src="assets/images/led.png"
+                            alt="Fotografia de LEDs de diferentes cores"
+                            style="max-width: 100%; height: auto;"
+                            loading="lazy"
+                        >
+                        <figcaption>
+                            LEDs utilizados para produzir iluminação.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        O LED transforma parte da energia elétrica em luz quando
+                        é polarizado corretamente. A cor emitida depende dos
+                        materiais utilizados em sua fabricação.
+                    </p>
+
+                    <p>
+                        É encontrado em lâmpadas, telas, painéis, lanternas
+                        e luzes indicadoras de aparelhos eletrônicos.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>3.3 Diodo Zener</h3>
+
+                    <figure>
+                        <img
+                            src="assets/images/zener.png"
+                            alt="Fotografia de um diodo Zener"
+                            style="max-width: 100%; height: auto;"
+                            loading="lazy"
+                        >
+                        <figcaption>
+                            Exemplo de diodo Zener.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        O diodo Zener é projetado para operar em uma região
+                        específica de polarização inversa. Ele pode ser utilizado
+                        para estabilizar ou limitar a tensão em determinados circuitos.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>3.4 Fotodiodo</h3>
+
+                    <p>
+                        O fotodiodo é sensível à luz. A iluminação altera suas
+                        características elétricas, permitindo que o circuito
+                        detecte sinais luminosos.
+                    </p>
+
+                    <p>
+                        É utilizado em sensores ópticos, instrumentos de medição
+                        e sistemas de comunicação.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>3.5 Diodo Schottky</h3>
+
+                    <figure>
+                        <img
+                            src="assets/images/schottky.png"
+                            alt="Fotografia de um diodo Schottky"
+                            style="max-width: 100%; height: auto;"
+                            loading="lazy"
+                        >
+                        <figcaption>
+                            Exemplo de diodo Schottky.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        O diodo Schottky apresenta uma queda de tensão direta
+                        geralmente menor que a de muitos diodos de silício comuns
+                        e pode apresentar comutação rápida.
+                    </p>
+
+                    <p>
+                        É utilizado em fontes de alimentação e circuitos que
+                        precisam reduzir perdas ou trabalhar com mudanças rápidas
+                        de estado.
+                    </p>
+                </article>
+
+                <p>
+                    <small>
+                        Créditos das imagens: imagens disponibilizadas no documento
+                        de referência do projeto. Consulte o material original para
+                        registrar a autoria e a fonte completa de cada imagem.
+                    </small>
+                </p>
+            </section>
+
+            <!-- EXEMPLO PRÁTICO -->
+            <section id="exemplo" class="secao">
+                <h2>4. Exemplo prático: acender um LED</h2>
+
+                <p>
+                    Um exemplo simples da utilização de um diodo é um circuito
+                    com uma fonte de baixa tensão, um resistor e um LED.
+                </p>
+
+                <ol>
+                    <li>
+                        A fonte fornece energia elétrica ao circuito.
+                    </li>
+                    <li>
+                        O resistor limita a corrente para proteger o LED.
+                    </li>
+                    <li>
+                        O LED é ligado com a polaridade correta.
+                    </li>
+                    <li>
+                        Quando a corrente passa pelo LED, ele emite luz.
+                    </li>
+                </ol>
+
+                <p>
+                    Se o LED for conectado ao contrário, normalmente não acenderá.
+                    A ligação invertida também pode danificá-lo caso a tensão
+                    inversa ultrapasse o limite especificado pelo fabricante.
+                </p>
+
+                <p>
+                    O resistor é importante porque a corrente não deve ser
+                    controlada apenas pela resistência interna do LED.
+                </p>
+
+                <p>
+                    Esse exemplo demonstra como um componente semicondutor
+                    pode transformar energia elétrica em outra forma de energia.
+                </p>
+
+                <p>
+                    <strong>Segurança:</strong> para atividades práticas, utilize
+                    uma fonte de baixa tensão adequada e supervisão do professor.
+                    Não faça experimentos diretamente na tomada.
+                </p>
+            </section>
+
+            <!-- RETIFICAÇÃO -->
+            <section id="retificacao" class="secao">
+                <h2>5. O que é retificação?</h2>
+
+                <p>
+                    Retificação é o processo de converter corrente alternada (CA)
+                    em corrente contínua pulsante. Na corrente alternada, o sentido
+                    da corrente muda periodicamente. Na corrente contínua, ela
+                    mantém o mesmo sentido.
+                </p>
+
+                <p>
+                    Muitos circuitos eletrônicos precisam de corrente contínua
+                    para funcionar. Por isso, os diodos são utilizados em fontes
+                    de alimentação para transformar a energia recebida em uma
+                    forma adequada aos equipamentos.
+                </p>
+
+                <article class="cartao">
+                    <h3>5.1 Retificação de meia onda</h3>
+
+                    <p>
+                        Na retificação de meia onda, um diodo permite a passagem
+                        de um dos semiciclos da tensão alternada e bloqueia o outro.
+                        O resultado é uma saída pulsante que utiliza apenas parte
+                        da onda de entrada.
+                    </p>
+
+                    <p>
+                        A principal vantagem é a simplicidade. A desvantagem é
+                        o aproveitamento limitado da forma de onda.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>5.2 Retificação de onda completa</h3>
+
+                    <p>
+                        A retificação de onda completa aproveita os dois semiciclos
+                        da tensão alternada, fazendo com que a corrente de saída
+                        mantenha o mesmo sentido.
+                    </p>
+
+                    <p>
+                        Um circuito comum utiliza quatro diodos conectados em
+                        uma ponte retificadora. Esse método produz pulsos em
+                        ambos os semiciclos e geralmente facilita a filtragem
+                        da tensão de saída.
+                    </p>
+                </article>
+
+                <article class="cartao">
+                    <h3>5.3 Filtragem e estabilização</h3>
+
+                    <p>
+                        Após a retificação, a tensão ainda pode variar bastante.
+                        Um capacitor de filtragem ajuda a reduzir essas oscilações.
+                        Em seguida, um regulador pode ser utilizado para manter
+                        a tensão próxima do valor desejado.
+                    </p>
+
+                    <p>
+                        Assim, uma fonte de alimentação pode combinar retificação,
+                        filtragem e regulação para fornecer energia adequada
+                        ao circuito eletrônico.
+                    </p>
+                </article>
+            </section>
+
+            <!-- APLICAÇÕES -->
+            <section id="aplicacoes" class="secao">
+                <h2>6. Aplicações dos diodos na Eletroeletrônica</h2>
+
+                <p>
+                    Os diodos são utilizados em diversos equipamentos e sistemas.
+                    Entre as principais aplicações estão:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Fontes de alimentação:</strong>
+                        conversão de corrente alternada em corrente contínua.
+                    </li>
+
+                    <li>
+                        <strong>Iluminação:</strong>
+                        LEDs em lâmpadas, telas e painéis.
+                    </li>
+
+                    <li>
+                        <strong>Proteção elétrica:</strong>
+                        circuitos que ajudam a limitar tensões ou a evitar
+                        efeitos de polaridade invertida.
+                    </li>
+
+                    <li>
+                        <strong>Sensores:</strong>
+                        fotodiodos que detectam a presença ou a intensidade da luz.
+                    </li>
+
+                    <li>
+                        <strong>Equipamentos de comunicação:</strong>
+                        detecção e processamento de sinais em circuitos específicos.
+                    </li>
+
+                    <li>
+                        <strong>Eletrônica automotiva:</strong>
+                        circuitos de alimentação, iluminação e proteção.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- CURIOSIDADE -->
+            <section id="curiosidade" class="secao">
+                <h2>7. Curiosidade: o rádio de galena</h2>
+
+                <p>
+                    O rádio de galena foi um tipo de receptor utilizado no início
+                    da história da radiodifusão. Ele podia receber sinais de rádio
+                    sem precisar de uma fonte elétrica externa para alimentar
+                    o circuito detector.
+                </p>
+
+                <p>
+                    O aparelho utilizava um cristal de galena e um contato metálico
+                    fino para detectar o sinal recebido. Esse comportamento
+                    contribuiu para o desenvolvimento histórico dos detectores
+                    semicondutores e dos primeiros receptores de rádio.
+                </p>
+
+                <p>
+                    Essa curiosidade mostra que o controle dos sinais elétricos
+                    por materiais e componentes especiais já era importante
+                    antes da popularização dos equipamentos eletrônicos modernos.
+                </p>
+            </section>
+
+            <!-- RESUMO -->
+            <section id="resumo" class="secao">
+                <h2>8. Resumo para o caderno</h2>
+
+                <p>
+                    O diodo é um componente semicondutor que conduz corrente
+                    principalmente em um sentido. Seus terminais são chamados
+                    ânodo e cátodo.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Polarização direta:</strong>
+                        permite a condução quando a tensão é suficiente.
+                    </li>
+
+                    <li>
+                        <strong>Polarização inversa:</strong>
+                        normalmente bloqueia a corrente.
+                    </li>
+
+                    <li>
+                        <strong>Diodo retificador:</strong>
+                        utilizado para converter CA em corrente contínua pulsante.
+                    </li>
+
+                    <li>
+                        <strong>LED:</strong>
+                        transforma parte da energia elétrica em luz.
+                    </li>
+
+                    <li>
+                        <strong>Diodo Zener:</strong>
+                        pode estabilizar ou limitar tensões em circuitos projetados
+                        para essa finalidade.
+                    </li>
+
+                    <li>
+                        <strong>Fotodiodo:</strong>
+                        detecta luz.
+                    </li>
+
+                    <li>
+                        <strong>Diodo Schottky:</strong>
+                        apresenta características úteis em circuitos rápidos
+                        e de baixa queda de tensão.
+                    </li>
+
+                    <li>
+                        <strong>Retificação de meia onda:</strong>
+                        aproveita um semiciclo da tensão alternada.
+                    </li>
+
+                    <li>
+                        <strong>Retificação de onda completa:</strong>
+                        aproveita os dois semiciclos.
+                    </li>
+
+                    <li>
+                        <strong>Filtragem:</strong>
+                        reduz as oscilações da tensão retificada.
+                    </li>
+                </ul>
+
+                <p>
+                    Os diodos são essenciais em fontes de alimentação, iluminação,
+                    sensores e circuitos de proteção.
+                </p>
+            </section>
+
+            <!-- QUIZ -->
+            <section id="quiz" class="secao">
+                <h2>9. Quiz: teste seus conhecimentos</h2>
+
+                <p>
+                    Responda às questões abaixo para verificar o que você aprendeu.
+                    Ao terminar, clique em “Corrigir respostas”.
+                </p>
+
+                <form id="quiz-diodos">
+
+                    <fieldset>
+                        <legend>
+                            <strong>1. Qual é a principal função de um diodo comum?</strong>
+                        </legend>
+
+                        <label>
+                            <input type="radio" name="q1" value="a">
+                            Armazenar grandes quantidades de energia.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q1" value="b">
+                            Conduzir corrente principalmente em um sentido.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q1" value="c">
+                            Transformar energia elétrica diretamente em som.
+                        </label>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>
+                            <strong>2. Quais são os terminais de um diodo?</strong>
+                        </legend>
+
+                        <label>
+                            <input type="radio" name="q2" value="a">
+                            Entrada e saída.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q2" value="b">
+                            Base e coletor.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q2" value="c">
+                            Ânodo e cátodo.
+                        </label>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>
+                            <strong>3. Qual diodo é utilizado para emitir luz?</strong>
+                        </legend>
+
+                        <label>
+                            <input type="radio" name="q3" value="a">
+                            LED.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q3" value="b">
+                            Fotodiodo.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q3" value="c">
+                            Diodo retificador.
+                        </label>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>
+                            <strong>4. O que é retificação?</strong>
+                        </legend>
+
+                        <label>
+                            <input type="radio" name="q4" value="a">
+                            Aumentar a resistência de um circuito.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q4" value="b">
+                            Converter corrente alternada em corrente contínua pulsante.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q4" value="c">
+                            Transformar luz em energia sonora.
+                        </label>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>
+                            <strong>5. Qual é a função do diodo Zener em circuitos apropriados?</strong>
+                        </legend>
+
+                        <label>
+                            <input type="radio" name="q5" value="a">
+                            Produzir luz de várias cores.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q5" value="b">
+                            Detectar a intensidade da luz.
+                        </label>
+                        <br>
+
+                        <label>
+                            <input type="radio" name="q5" value="c">
+                            Ajudar a estabilizar ou limitar a tensão.
+                        </label>
+                    </fieldset>
+
+                    <br>
+
+                    <button class="botao" type="submit">
+                        Corrigir respostas
+                    </button>
+
+                    <button class="botao" type="reset">
+                        Tentar novamente
+                    </button>
+
+                    <p id="resultado-quiz" role="status" aria-live="polite"></p>
+
+                </form>
+            </section>
+
+            <!-- REFERÊNCIAS -->
+            <section id="referencias" class="secao">
+                <h2>10. Referências</h2>
+
+                <p>
+                    Para a elaboração e aprofundamento do conteúdo, consulte
+                    materiais didáticos e fontes técnicas sobre semicondutores,
+                    diodos e circuitos retificadores.
+                </p>
+
+                <ul>
+                    <li>
+                        Material de referência do projeto:
+                        <em>Diodos e retificação</em>, documento disponibilizado
+                        para a atividade escolar.
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.allaboutcircuits.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            All About Circuits — materiais de estudo de eletrônica.
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.electronics-tutorials.ws/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Electronics Tutorials — fundamentos de circuitos.
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://scholar.google.com.br/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Google Acadêmico — pesquisa de livros e artigos técnicos.
+                        </a>
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>Créditos das imagens:</strong> as imagens utilizadas
+                    nesta página estão na pasta
+                    <code>assets/images/</code>. Registre a autoria, o título
+                    e o endereço original de cada imagem conforme o documento
+                    de referência ou a fonte em que foi publicada.
+                </p>
+            </section>
+
+            <a class="botao" href="index.html">Voltar à página inicial</a>
+
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>Portal Educativo — Projeto de Eletroeletrônica.</p>
+        <p>Assunto: Diodos e Retificação.</p>
+        <a href="index.html">Página inicial</a>
+    </footer>
+
+    <!-- FUNCIONAMENTO DO QUIZ -->
+    <script>
+        const quiz = document.getElementById("quiz-diodos");
+        const resultado = document.getElementById("resultado-quiz");
+
+        const respostasCorretas = {
+            q1: "b",
+            q2: "c",
+            q3: "a",
+            q4: "b",
+            q5: "c"
+        };
+
+        quiz.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let pontos = 0;
+            let respondidas = 0;
+
+            quiz.querySelectorAll("fieldset").forEach(function(pergunta) {
+                pergunta.classList.remove("quiz-correta");
+            });
+
+            for (const pergunta in respostasCorretas) {
+                const resposta = quiz.querySelector(
+                    'input[name="' + pergunta + '"]:checked'
+                );
+
+                if (resposta) {
+                    respondidas++;
+
+                    if (resposta.value === respostasCorretas[pergunta]) {
+                        pontos++;
+                        resposta.closest("fieldset").classList.add("quiz-correta");
+                    }
+                }
+            }
+
+            if (respondidas < 5) {
+                resultado.textContent =
+                    "Responda às 5 questões antes de corrigir. Você respondeu " +
+                    respondidas + " de 5.";
+                return;
+            }
+
+            resultado.textContent =
+                "Você acertou " + pontos + " de 5 questões.";
+
+            if (pontos === 5) {
+                resultado.textContent +=
+                    " Parabéns! Você compreendeu muito bem o conteúdo.";
+            } else if (pontos >= 3) {
+                resultado.textContent +=
+                    " Bom trabalho! Revise as questões que errou.";
+            } else {
+                resultado.textContent +=
+                    " Revise o conteúdo e tente novamente.";
+            }
+        });
+
+        quiz.addEventListener("reset", function() {
+            resultado.textContent = "";
+            quiz.querySelectorAll("fieldset").forEach(function(pergunta) {
+                pergunta.classList.remove("quiz-correta");
+            });
+        });
+    </script>
+
+</body>
+</html>
